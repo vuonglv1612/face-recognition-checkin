@@ -1,5 +1,7 @@
 # FACE RECOGNITION CHECK-IN
 
+Basic Real time Face Recognition Check-in Application
+
 ## 1. Dependencies
 - cmake 3.22
 - poetry 1.1
