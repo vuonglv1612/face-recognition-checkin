@@ -11,7 +11,13 @@ poetry env use python3.8
 poetry install
 ```
 
-## 3. Training
+## 3. Configuration
+```bash
+cp .env.template .env
+```
+Edit .env file configuration
+
+## 4. Training
 Add face images to `images` folder
 
 And run following command
@@ -19,7 +25,14 @@ And run following command
 poetry run python train.py
 ```
 
-## 4. Running
+## 5. Start recognizer
 ```bash
 poetry run python main.py
+```
+Press `q` to stop recognizer
+
+## 6. Start worker
+If you want to send check in image to telegram group, start worker at another terminal
+```bash
+poetry run python worker.py
 ```

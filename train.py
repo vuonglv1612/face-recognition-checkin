@@ -14,7 +14,9 @@ for subfolder in os.listdir(image_folder):
     print("Processing folder: " + subfolder)
     for filename in os.listdir(os.path.join(image_folder, subfolder)):
         print("\tProcessing file: " + filename)
-        image = face_recognition.load_image_file(os.path.join(image_folder, subfolder, filename))
+        image = face_recognition.load_image_file(
+            os.path.join(image_folder, subfolder, filename)
+        )
         face_encoding = face_recognition.face_encodings(image, num_jitters=jitter)[0]
         known_face_encodings.append(face_encoding)
         known_face_names.append(subfolder)
